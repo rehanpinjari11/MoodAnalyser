@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MoodAnalyserTest {
 
     @Test
-    public void givenMessage_WhenProper_ShouldReturnSad(){
-        MoodAnalyser moodAnalyser = new MoodAnalyser("I Am In Sad mood.");
+    public void givenMessage_WhenProper_ShouldReturnHappy(){
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I Am In Happy mood.");
         String result = moodAnalyser.analyseMood();
         System.out.println(result);
-        assertEquals("SAD" , result);
+        assertEquals("HAPPY" , result);
     }
 
 }
