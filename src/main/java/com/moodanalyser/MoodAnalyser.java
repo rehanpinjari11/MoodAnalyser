@@ -16,13 +16,18 @@ public class MoodAnalyser {
     // Method to analyze the mood based on the message
     public String analyseMood()
     {
-        if (message.contains("Sad")) {
-            return "SAD";
+        try {
+
+            if (message.contains("Sad")) {
+                return "SAD";
+            } else if (message.contains("Happy")) {
+                return "HAPPY";
+            }
         }
-        else if (message.contains("Happy")) {
-            return "HAPPY";
+        catch (NullPointerException e){
+            System.out.println("Please Enter the Valid Mood.");
         }
-        else
-            return null;
+
+        return "NULL";
     }
 }
