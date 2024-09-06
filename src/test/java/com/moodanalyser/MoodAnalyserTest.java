@@ -23,11 +23,11 @@ public class MoodAnalyserTest {
     }
 
     @Test
-    public void givenMessage_WhenNull_ShouldReturn() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("null");
+    public void givenMessage_WhenNull_ShouldReturnHappy() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
         String result = moodAnalyser.analyseMood();
         System.out.println(result);
-        assertEquals("NULL", result);
+        assertEquals("HAPPY", result);
     }
 
 }
